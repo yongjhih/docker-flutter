@@ -1,15 +1,12 @@
 FROM yongjhih/android
 
-ENV FLUTTER_VERSION=1.5.4-hotfix.2-stable
+ENV FLUTTER_VERSION=1.7.5
+ENV FLUTTER_ROOT="/flutter"
 
-# ref. https://flutter.dev/docs/get-started/install/linux
-RUN wget "https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v${FLUTTER_VERSION}.tar.xz" -O - | tar -Jx
+RUN git clone -b "v${FLUTTER_VERSION}" --single-branch --depth 1 https://github.com/flutter/flutter.git && \
+    echo 'export FLUTTER_ROOT=\"/flutter\"' >> /etc/environment && \
+    echo 'export PATH=\"${PATH}:${FLUTTER_ROOT}/bin\"' >> /etc/environment
 
-ENV FLUTTER_SDK="/flutter"
-ENV FLUTTER_HOME="${FLUTTER_SDK}"
-ENV FLUTTER_ROOT="${FLUTTER_SDK}"
-RUN echo 'export FLUTTER_ROOT=\"/flutter\"' >> /etc/environment
+ENV PATH="${PATH}:${FLUTTER_ROOT}/bin"
 
-ENV PATH="${PATH}:${FLUTTER_SDK}/bin"
-RUN echo 'export PATH=\"${PATH}:${FLUTTER_SDK}/bin\"' >> /etc/environment
 RUN flutter precache
