@@ -9,4 +9,4 @@ RUN git clone -b "v${FLUTTER_VERSION}" --single-branch --depth 1 https://github.
 
 ENV PATH="${PATH}:${FLUTTER_ROOT}/bin"
 
-RUN flutter precache
+#RUN flutter precache
