@@ -7,6 +7,7 @@
 [![Docker Layers](https://img.shields.io/imagelayers/layers/yongjhih/flutter/latest.svg)](https://imagelayers.io/?images=yongjhih/flutter:latest)
 [![License](https://img.shields.io/github/license/yongjhih/docker-flutter.svg)](https://github.com/yongjhih/docker-flutter/raw/master/LICENSE)
 [![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/docker-flutter.svg)](https://gitter.im/yongjhih/docker-flutter)
+[![](https://images.microbadger.com/badges/version/yongjhih/flutter:latest.svg)](https://microbadger.com/images/yongjhih/flutter:latest) [![](https://images.microbadger.com/badges/image/yongjhih/flutter:latest.svg)](https://microbadger.com/images/yongjhih/flutter:latest)
 
 ![](art/docker-flutter.png)
 
